@@ -22,7 +22,7 @@ $(function () {
 
     });
 
-    $('html').live("swipeleft", function () {
+    $('html').on("swipeleft", function () {
         if (menuStatus) {
             $("body, .slideWrap").animate({
                 marginLeft: "0px"
@@ -33,7 +33,7 @@ $(function () {
         }
     });
 
-    $('html').live("swiperight", function () {
+    $('html').on("swiperight", function () {
         if (!menuStatus) {
             $(".slideWrap").show();
             $("body, .slideWrap").animate({

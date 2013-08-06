@@ -4,7 +4,7 @@ West
 West is a slide-in navigation with gesture support on mobile & tablet. It is also browser compatible and is incredibly lightweight and easy to install. View it live [here](http://joey.so/west)
 
 # Installation
-The installation is not hard, if you literally have basic HTML & CSS knowledge, you will be fine. First you need to download the [master](https://github.com/dope/west/archive/master.zip) (of course) and link your stylesheets and scripts.
+The installation is not hard, if you literally have basic HTML & CSS knowledge, you will be fine. First you need to download the [master](https://github.com/dope/west/archive/master.zip) and link your stylesheets and scripts.
 
 ```
 <link rel="stylesheet" type="text/css" href="css/west.css">

@@ -1,8 +1,38 @@
-west
+West
 ====
 
-Really simple jQuery slide-in navigation. This is for a personal project, but you dudes can do what you want with it.
+West is a slide-in navigation with gesture support on mobile & tablet. It also browser compatible and is incredibly lightweight and easy to install. View it live [here](http://joey.so/west)
 
-Works on mobile & tablet. Oh and it's browser compatible apart from IE 6,7 & 8.
+# Installation
+The installation is not hard, if you literally have basic HTML & CSS knowledge, you will be fine. First you need to download the master (of course) and link your stylesheets and scripts.
 
-See the live view at: http://joey.so/west
+
+```
+<link rel="stylesheet" type="text/css" href="css/west.css">
+<script src="js/west.js" type="text/javascript"></script>
+```
+
+In order for this to work, you'll need to link jQuery — You can either do this by downloading the libraries from the [jQuery](http://jquery.com) website or link them direct
+```
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.js"></script>
+```
+
+Once your scripts set up, you need to create your ```html``` document. I would reccomend putting the ```.nav-btn``` at the top of your page (just below body)
+```
+<button class="nav-btn">&#9776;</button>
+```
+Next is the actual navigation itself.
+```
+<nav class="slideWrap">
+	<ul class="orderSlide">
+		<li><a href="#">List Item</a></li>
+		<li><a href="#">List Item</a></li>
+		<li><a href="#">List Item</a></li>
+		<li><a href="#">List Item</a></li>
+	</ul>
+</nav>
+```
+
+# That's it.
+It's that simple, if you have any issues or questions: [tweet me](http://twitter.com/joericho)

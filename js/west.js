@@ -1,19 +1,18 @@
-
 $(function () {
     var menuStatus;
 
-    $(".nav-btn").click(function() {
-        if (menuStatus != true) {
+    $(".nav-btn").click(function () {
+        if (menuStatus !== true) {
             $(".slideWrap").show();
             $(".slideWrap, body").animate({
-                marginLeft: "250px",
+                marginLeft: "250px"
             }, 100, function () {
                 menuStatus = true;
             });
             return false;
         } else {
             $(".slideWrap, body").animate({
-                marginLeft: "0px",
+                marginLeft: "0px"
             }, 100, function () {
                 menuStatus = false;
                 $(".slideWrap").hide();
@@ -26,7 +25,7 @@ $(function () {
     $('html').live("swipeleft", function () {
         if (menuStatus) {
             $("body, .slideWrap").animate({
-                marginLeft: "0px",
+                marginLeft: "0px"
             }, 0, function () {
                 menuStatus = false;
                 $(".slideWrap").hide();
@@ -38,7 +37,7 @@ $(function () {
         if (!menuStatus) {
             $(".slideWrap").show();
             $("body, .slideWrap").animate({
-                marginLeft: "250px",
+                marginLeft: "250px"
             }, 0, function () {
                 menuStatus = true;
             });

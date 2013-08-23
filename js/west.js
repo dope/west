@@ -6,14 +6,14 @@ $(function () {
             $(".slideWrap").show();
             $(".slideWrap, body").animate({
                 marginLeft: "250px"
-            }, 100, function () {
+            }, 200, function () {
                 menuStatus = true;
             });
             return false;
         } else {
             $(".slideWrap, body").animate({
                 marginLeft: "0px"
-            }, 100, function () {
+            }, 200, function () {
                 menuStatus = false;
                 $(".slideWrap").hide();
             });
@@ -26,7 +26,7 @@ $(function () {
         if (menuStatus) {
             $("body, .slideWrap").animate({
                 marginLeft: "0px"
-            }, 0, function () {
+            }, 100, function () {
                 menuStatus = false;
                 $(".slideWrap").hide();
             });
@@ -38,7 +38,7 @@ $(function () {
             $(".slideWrap").show();
             $("body, .slideWrap").animate({
                 marginLeft: "250px"
-            }, 0, function () {
+            }, 100, function () {
                 menuStatus = true;
             });
         }
@@ -48,5 +48,8 @@ $(function () {
         $(this).trigger('click');
         e.preventDefault();
     });
+
+    $.mobile.loading( 'show', { theme: "b", text: "", textonly: false});
+
 
 });

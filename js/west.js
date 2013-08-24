@@ -1,47 +1,15 @@
 $(function () {
-    var menuStatus;
 
     $(".nav-btn").click(function () {
-        if (menuStatus !== true) {
-            $(".slideWrap").show();
-            $(".slideWrap, body").animate({
-                marginLeft: "250px"
-            }, 200, function () {
-                menuStatus = true;
-            });
-            return false;
-        } else {
-            $(".slideWrap, body").animate({
-                marginLeft: "0px"
-            }, 200, function () {
-                menuStatus = false;
-                $(".slideWrap").hide();
-            });
-            return false;
-        }
-
+        $('body').toggleClass('is-offscreen');
     });
 
     $('html').on("swipeleft", function () {
-        if (menuStatus) {
-            $("body, .slideWrap").animate({
-                marginLeft: "0px"
-            }, 100, function () {
-                menuStatus = false;
-                $(".slideWrap").hide();
-            });
-        }
+        $('body').removeClass('is-offscreen');
     });
 
     $('html').on("swiperight", function () {
-        if (!menuStatus) {
-            $(".slideWrap").show();
-            $("body, .slideWrap").animate({
-                marginLeft: "250px"
-            }, 100, function () {
-                menuStatus = true;
-            });
-        }
+        $('body').addClass('is-offscreen');
     });
 
     $('.nav-btn, a').bind('touchstart', function (e) {
@@ -50,6 +18,5 @@ $(function () {
     });
 
     $.mobile.loading( 'show', { theme: "b", text: "", textonly: false});
-
 
 });

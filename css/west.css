@@ -12,6 +12,7 @@ section {
 
 html {
   font-size: 100%;
+  overflow-x:hidden;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
@@ -52,6 +53,7 @@ a:hover {
 }
 
 body {
+  overflow-x: hidden; 
   font:16px/1.4em "Source Sans Pro";
   background: url('../img/kanye-desktop.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;

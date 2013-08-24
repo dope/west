@@ -12,6 +12,7 @@ section {
 
 html {
   font-size: 100%;
+  overflow-x:hidden;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
@@ -52,6 +53,7 @@ a:hover {
 }
 
 body {
+  overflow-x: hidden; 
   font:16px/1.4em "Source Sans Pro";
   background: url('../img/kanye-desktop.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -75,7 +77,6 @@ body {
 
 .slideWrap {
   position: fixed;
-  display:none;
   top:0;
   left:-250px;
   background:#212b35;
@@ -103,4 +104,15 @@ body {
   -webkit-transition: all 0.3s ease-in-out;
      -moz-transition: all 0.3s ease-in-out;
           transition: all 0.3s ease-in-out;
+}
+
+body, .slideWrap{
+  -webkit-transition: margin 0.2s ease-in-out;
+     -moz-transition: margin 0.2s ease-in-out;
+          transition: margin 0.2s ease-in-out;
+}
+
+body.is-offscreen, 
+body.is-offscreen .slideWrap{
+  margin-left:250px;
 }

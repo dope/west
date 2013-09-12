@@ -65,11 +65,6 @@ a:hover {
 body {
   overflow-x: hidden; 
   font:16px/1.4em "Source Sans Pro";
-  background: url('../img/kanye-desktop.jpg') no-repeat center center fixed; 
-  -webkit-background-size: cover;
-     -moz-background-size: cover;
-       -o-background-size: cover;
-          background-size: cover;
 }
 
 .nav-btn {
@@ -83,6 +78,23 @@ body {
   font-weight:700;
   padding-top:4px;
   padding-bottom:6px;
+}
+
+.wraps {
+    width:50%;
+    max-width:500px;
+    margin:0 auto;
+}
+
+h1 {
+    font-size:2em;
+    margin-bottom:30px;
+}
+
+p {
+    margin-bottom:50px;
+    line-height:150%;
+    word-spacing:3px;
 }
 
 .slideWrap {
@@ -125,4 +137,31 @@ body, .slideWrap{
 body.is-offscreen, 
 body.is-offscreen .slideWrap{
   margin-left:250px;
+}
+
+/* small */
+ @media (max-width: 480px) {
+    .wraps {
+        width:90%;
+        min-width:370px;
+        padding:30px;
+    }
+}
+
+/* tablet */
+ @media (max-width: 800px) {
+    .wraps {
+        width:80%;
+        min-width:600px;
+        padding:30px;
+    }
+}
+
+/* small desktop */
+ @media (min-width: 800px) and (max-width: 1100px) {
+    .wraps {
+        width:70%;
+        min-width:600px;
+        padding:30px;
+    }
 }

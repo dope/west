@@ -63,8 +63,8 @@ a:hover {
 }
 
 body {
-  overflow-x: hidden; 
   font:16px/1.4em "Source Sans Pro";
+  overflow:hidden;
 }
 
 .nav-btn {
@@ -81,20 +81,22 @@ body {
 }
 
 .wraps {
-    width:50%;
-    max-width:500px;
-    margin:0 auto;
+  width:50%;
+  max-width:600px;
+  margin:0 auto;
 }
 
 h1 {
-    font-size:2em;
-    margin-bottom:30px;
+  font-size:4em;
+  margin-bottom:30px;
 }
 
 p {
-    margin-bottom:50px;
-    line-height:150%;
-    word-spacing:3px;
+  margin-bottom:50px;
+  line-height:150%;
+  word-spacing:3px;
+  width:600px;
+  
 }
 
 .slideWrap {
@@ -139,29 +141,57 @@ body.is-offscreen .slideWrap{
   margin-left:250px;
 }
 
-/* small */
- @media (max-width: 480px) {
-    .wraps {
-        width:90%;
-        min-width:370px;
-        padding:30px;
-    }
+
+/* Landscape mobile & down */
+@media (max-width: 480px) {
+  .wraps {
+    width:90%;
+    max-width:400px;
+    margin:40px auto;
+  }
+  
+  .nav-btn {
+    margin:0;
+    border-radius:0;
+  }
+  
+  h1 {
+    font-size:1.5em; 
+    margin-bottom:15px;
+  }
+  
+  p {
+    margin-bottom:30px;
+    line-height:150%;
+    word-spacing:3px;
+    width:350px;
+    font-size:15px;
+  }
 }
 
-/* tablet */
- @media (max-width: 800px) {
-    .wraps {
-        width:80%;
-        min-width:600px;
-        padding:30px;
-    }
-}
-
-/* small desktop */
- @media (min-width: 800px) and (max-width: 1100px) {
-    .wraps {
-        width:70%;
-        min-width:600px;
-        padding:30px;
-    }
+/* Portrait tablet to landscape */
+@media (min-width: 480px) and (max-width: 800px) {
+  .wraps {
+    width:90%;
+    max-width:600px;
+    margin:40px auto;
+  }
+  
+  .nav-btn {
+    margin:0;
+    border-radius:0;
+  }
+  
+  h1 {
+    font-size:2.1em; 
+    margin-bottom:15px;
+  }
+  
+  p {
+    margin-bottom:30px;
+    line-height:150%;
+    word-spacing:3px;
+    width:470px;
+    font-size:15px;
+  }  
 }

@@ -17,6 +17,10 @@ $(function () {
         e.preventDefault();
     });
 
-    $.mobile.loading( 'show', { theme: "b", text: "", textonly: false});
+    $.mobile.loading('show', {
+        theme: "b",
+        text: "",
+        textonly: false
+    });
 
 });

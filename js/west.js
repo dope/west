@@ -1,18 +1,18 @@
 $(function () {
 
-    $(".trigger").click(function () {
-        $('.navWrap').toggleClass('open');
-    });
-
-    $('html').on("swiperight", function () {
-        $('.navWrap').removeClass('open');
+    $(".nav-btn").click(function () {
+        $('body').toggleClass('is-offscreen');
     });
 
     $('html').on("swipeleft", function () {
-        $('.navWrap').addClass('open');
+        $('body').removeClass('is-offscreen');
     });
 
-    $('.trigger').bind('touchstart', function (e) {
+    $('html').on("swiperight", function () {
+        $('body').addClass('is-offscreen');
+    });
+
+    $('.nav-btn, a').bind('touchstart', function (e) {
         $(this).trigger('click');
         e.preventDefault();
     });
@@ -24,4 +24,3 @@ $(function () {
     });
 
 });
-

@@ -17,18 +17,21 @@ In order for this to work, you'll need to link jQuery — You can either do this
 <script type="text/javascript" src="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.js"></script>
 ```
 
-Once your scripts are set up, you need to create your ```html``` document. I would reccomend putting the ```.nav-btn``` at the top of your page, just below the opening ```<body>```
+Once your scripts are set up, you need to create your ```html``` document. I would reccomend putting the ```.trigger``` at the top of your page, just below the opening ```<body>```
 ```
 <button class="nav-btn">&#9776;</button>
 ```
 Next is the actual navigation itself.
 ```
-<nav class="slideWrap">
-	<ul class="orderSlide">
-		<li><a href="#">List Item</a></li>
-		<li><a href="#">List Item</a></li>
-		<li><a href="#">List Item</a></li>
-		<li><a href="#">List Item</a></li>
+<nav class="navWrap">
+	<button data-role="none" class="trigger">&#9776;</button>
+	<ul class="mainList">
+		<li><a href="#">Menu Item</a></li>
+		<li><a href="#">Menu Item</a></li>
+		<li><a href="#">Menu Item</a></li>
+		<li><a href="#">Menu Item</a></li>
+		<li><a href="#">Menu Item</a></li>
+		<li><a href="#">Menu Item</a></li>
 	</ul>
 </nav>
 ```

@@ -1,86 +1,128 @@
-article, 
-aside, 
-details, 
-figcaption, 
-figure, 
-footer, 
-header, 
-hgroup, 
-nav, 
+/*
+*
+* West v1
+* Copyright 2013, Joe Richardson
+* joey.so/west
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+*
+*/
+
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
 section {
-	display: block;
+  display: block;
 }
 
 html {
-	font-size: 100%;
-	-webkit-text-size-adjust: 100%;
- 	-ms-text-size-adjust: 100%;
+  font-size: 100%;
+  overflow-x:hidden;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
-a, 
-a:visited, 
+a,
+a:visited,
 a:active {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 a:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 * {
-	font-size:100%;
-	margin: 0;
-	padding: 0;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+  font-size:100%;
+  margin: 0;
+  padding: 0;
+  list-style:none;
+  outline:none;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-	font-family: "Montserrat", Arial, Helvetica, Helvetica Neue;
-	font-size: 14px;
+  overflow-x: hidden; 
+  font:16px/1.4em "Helvetica Neue", Arial;
 }
 
-.trigger {
-	position:absolute;
-	left:-65px;
-	top:0;
-	background:#222;
-	padding:15px 20px 15px 20px;
-	color:#fff;
-	border:0;
-	font-size:2em;
-	cursor:pointer;
+.nav-btn {
+  position: absolute;
+  z-index:1000000000;
+  top:20px;
+  right:-60px;
+  padding:10px;
+  background:#212b35;
+  color:#fff;
+  border:0;
+  border-radius:3px;
+  font-size:20px;
+  font-weight:700;
+  padding-top:4px;
+  padding-bottom:6px;
+  cursor: pointer;
 }
 
-.navWrap {
-	position:fixed;
-	right:0;
-	top:0;
-	height:100%;
-	width:250px;
-	background:#222;
-	-webkit-transition: all 0.2s ease-in-out;
-	-moz-transition: all 0.2s ease-in-out;
-	transition: all 0.2s ease-in-out;
-	padding:10px 0px 0px 0px;
-	margin-right:-250px;
+.slideWrap {
+  position: fixed;
+  top:0;
+  left:-250px;
+  background:#212b35;
+  width:250px;
+  padding-top:40px;
+  height:100%;
 }
 
-.open {
-	margin-right:0px;
+.orderSlide > li > a,a:visited {
+  font-size:15px;
+  font-weight:600;
+  color:#e1e6d0;
+  display:block;
+  padding:10px;
+  padding-left:20px;
+  -webkit-transition: all 0.3s ease-in-out;
+     -moz-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
 }
 
-.mainList > li {
-	list-style:none;
+
+.orderSlide > li > a:hover {
+  background:#2a3644;
+  color:#fff;
+  -webkit-transition: all 0.3s ease-in-out;
+     -moz-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
 }
 
-.mainList > li > a,a:visited {
-	display:block;
-	padding:20px 20px 20px 30px;
-	color:#bbb;
+body, .slideWrap{
+  -webkit-transition: margin 0.2s ease-in-out;
+     -moz-transition: margin 0.2s ease-in-out;
+          transition: margin 0.2s ease-in-out;
 }
 
-.mainList > li > a:hover {
-	color:#fff;
+body.is-offscreen, 
+body.is-offscreen .slideWrap{
+  margin-left:250px;
+}
+
+/* small */
+ @media (max-width: 480px) {
+
+}
+
+/* tablet */
+ @media (max-width: 800px) {
+
+}
+
+/* small desktop */
+ @media (min-width: 800px) and (max-width: 1100px) {
+
 }

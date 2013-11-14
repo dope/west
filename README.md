@@ -1,7 +1,7 @@
 West
 ====
 
-West is a slide-in navigation with gesture support on mobile & tablet. It is also browser compatible and is incredibly lightweight and easy to install. View it live [here](http://dope.github.io/west)
+West is a slide-in navigation with gesture support on mobile & tablet. It is also browser compatible and is incredibly lightweight and easy to install. View it live [here](http://joey.so/west)
 
 # Installation
 The installation is not hard, if you literally have basic HTML & CSS knowledge, you will be fine. First you need to download the [master](https://github.com/dope/west/archive/master.zip) and link your stylesheets and scripts.
@@ -13,14 +13,12 @@ The installation is not hard, if you literally have basic HTML & CSS knowledge, 
 
 In order for this to work, you'll need to link jQuery — You can either do this by downloading the libraries from the [jQuery](http://jquery.com) website or link them direct:
 ```
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
 ```
 
-Once your scripts are set up, you need to create your ```html``` document. I would reccomend putting the ```.trigger``` at the top of your page, just below the opening ```<body>```
-```
-<button class="nav-btn">&#9776;</button>
-```
+Once your scripts are set up, you need to create your ```html``` document. 
+
 Next is the actual navigation itself.
 ```
 <nav class="navWrap">

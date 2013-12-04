@@ -7,17 +7,30 @@
 	box-sizing: border-box;
 }
 
+body, html {
+	height:100%;
+}
+
+section {
+	width:60%;
+	margin:40px auto;
+}
+
 body {
-	background: url('../default-image.jpg') no-repeat center center fixed; 
+  background: url('../default-image.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
+
 
 .trigger {
 	position:absolute;
-	left:-65px;
+	right:-65px;
 	top:0;
 	background:#222;
 	padding:15px 20px 15px 20px;
@@ -31,36 +44,48 @@ body {
 
 .navWrap {
 	position:fixed;
-	right:0;
+	left:0;
 	top:0;
 	height:100%;
 	width:250px;
 	background:#222;
-	-webkit-transition: all 0.2s ease-in-out;
-	-moz-transition: all 0.2s ease-in-out;
-	transition: all 0.2s ease-in-out;
 	padding:10px 0px 0px 0px;
-	margin-right:-250px;
+	margin-left:-250px;
 	font-family: "Montserrat", Arial, Helvetica, Helvetica Neue;
 	font-size: 14px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .open {
-	margin-right:0px;
+	margin-left:0px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.mainList > li {
+.bodyLeft {
+	margin-left:250px;
+	width:100%;
+	overflow: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.mainList li {
 	list-style:none;
 }
 
-.mainList > li > a,a:visited {
+.mainList a,a:visited {
 	display:block;
 	padding:20px 20px 20px 30px;
 	color:#bbb;
 	text-decoration: none;
 }
 
-.mainList > li > a:hover {
+.mainList a:hover {
 	color:#fff;
 	text-decoration: none;
 }

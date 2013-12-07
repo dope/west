@@ -1,13 +1,20 @@
- $(function () {
+$body = $('body');
+$trig = $('.trigger');
 
-    $(".trigger").click(function () {
+$(function () {
+    $trig.click(function () {
         $('.navWrap').toggleClass('open');
-        $('body').toggleClass('bodyLeft');
+        $body.toggleClass('bodyLeft');
+        return false;
     });
-
-
-    $('.trigger').bind('touchstart', function (e) {
+    $trig.bind('touchstart', function (e) {
         $(this).trigger('click');
         e.preventDefault();
+    });
+    $body.click(function (event) {
+        if (!$(event.target).closest('.navWrap').length) {
+            $('.navWrap').removeClass('open');
+            $('body').removeClass('bodyLeft');
+        }
     });
 });

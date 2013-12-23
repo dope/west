@@ -14,7 +14,7 @@ $(function () {
     $body.click(function (event) {
         if (!$(event.target).closest('.navWrap').length) {
             $('.navWrap').removeClass('open');
-            $('body').removeClass('bodyLeft');
+            $body.removeClass('bodyLeft');
         }
     });
 });

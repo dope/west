@@ -5,37 +5,33 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  list-style-type: none;
 }
 
 body, html {
   height:100%;
 }
 
-section {
-  width:60%;
-  margin:40px auto;
-}
 
+/* For Demo Purposes Only */
 body {
   background: url('../default-image.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
+  background-size: cover;}
 
 
+/* Start West Styles */
 .trigger {
   position:absolute;
-  right:-40px;
-  top:10px;
-  background:#fff;
-  width:30px;
-  padding:10px;
+  right:-65px;
+  top:0;
+  background:#222;
+  padding:15px 20px 15px 20px;
+  color:#fff;
   border:0;
+  font-size:2em;
   cursor:pointer;
   outline:none;
   z-index:10000000000000;
@@ -59,29 +55,23 @@ body {
   margin-left:-250px;
   font-family: "Montserrat", Arial, Helvetica, Helvetica Neue;
   font-size: 14px;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
 }
 
 .open {
   margin-left:0px;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 .bodyLeft {
   margin-left:250px;
   width:100%;
   overflow: hidden;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.mainList li {
-  list-style:none;
 }
 
 .mainList a,a:visited {
@@ -89,9 +79,19 @@ body {
   padding:20px 20px 20px 30px;
   color:#bbb;
   text-decoration: none;
+  -webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
 }
 
 .mainList a:hover {
   color:#fff;
   text-decoration: none;
+  -webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
 }

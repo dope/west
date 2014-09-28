@@ -20,16 +20,16 @@ Once your scripts are set up, you need to create your ```html``` document.
 
 Next is the actual navigation itself.
 ```
-<nav class="navWrap">
-    <button class="trigger">&#9776;</button>
-  <ul class="mainList">
-    <li><a href="#">Menu Item</a></li>
-    <li><a href="#">Menu Item</a></li>
-    <li><a href="#">Menu Item</a></li>
-    <li><a href="#">Menu Item</a></li>
-    <li><a href="#">Menu Item</a></li>
-    <li><a href="#">Menu Item</a></li>
-  </ul>
+<nav class="site-menu js-menu">
+    <span class="site-menu__trigger js-trigger"></span>
+    <ul class="site-menu__nav">
+        <li class="site-menu__list"><a href="#" class="site-menu__link">List Item</a></li>
+        <li class="site-menu__list"><a href="#" class="site-menu__link">List Item</a></li>
+        <li class="site-menu__list"><a href="#" class="site-menu__link">List Item</a></li>
+        <li class="site-menu__list"><a href="#" class="site-menu__link">List Item</a></li>
+        <li class="site-menu__list"><a href="http://github.com/dope/west" class="site-menu__link">GitHub Project</a></li>
+        <li class="site-menu__list"><a href="http://twitter.com/joericho" class="site-menu__link">@joericho</a></li>
+    </ul>
 </nav>
 ```
 

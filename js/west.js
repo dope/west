@@ -1,20 +1,29 @@
-$body = $('body');
-$trig = $('.trigger');
+// Variables
+var trigger     = '.js-trigger';
+var menu        = '.js-menu';
+var menuFly     = 'site-menu--fly';
+var bodyFly     = 'body--fly';
 
-$(function () {
-    $trig.click(function () {
-        $('.navWrap').toggleClass('open');
-        $body.toggleClass('bodyLeft');
-        return false;
-    });
-    $trig.bind('touchstart', function (e) {
-        $(this).trigger('click');
-        e.preventDefault();
-    });
-    $body.click(function (event) {
-        if (!$(event.target).closest('.navWrap').length) {
-            $('.navWrap').removeClass('open');
-            $body.removeClass('bodyLeft');
-        }
-    });
+// Functions
+function slideWest() {
+    $(menu).toggleClass(menuFly);
+    $(document.body).toggleClass(bodyFly);
+}
+
+function escWest() {
+    $(menu).removeClass(menuFly);
+    $(document.body).removeClass(bodyFly);
+}
+
+// Main fly out.
+$(trigger).on('click', function() {
+    slideWest();
+});
+
+
+// Esc Key, hide menu.
+$(document).keydown(function(e) {
+    if(e.keyCode == 27) {
+        escWest();
+    }
 });

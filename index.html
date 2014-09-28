@@ -4,32 +4,25 @@
 
 <head>
 	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-
+	<meta name="viewport" content="width=device-width, minimal-ui">
  	<link rel="stylesheet" type="text/css" href="css/west.css">
-	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-
-	<title>West &#8212; jQuery Navigation</title>
-
-	<!--[if IE]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-
+ 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<title>West</title>
 </head>
 <body>
-	<nav class="navWrap">
-		<button class="trigger">&#9776;</button>
-		<ul class="mainList">
-			<li><a href="#">Menu Item</a></li>
-			<li><a href="#">Menu Item</a></li>
-			<li><a href="#">Menu Item</a></li>
-			<li><a href="http://twitter.com/joericho">@joericho</a></li>
-			<li><a href="http://github.com/dope/west">GitHub Project</a></li>
-			<li><a href="https://github.com/dope/west/archive/master.zip">Download</a></li>
+	<nav class="site-menu js-menu">
+		<span class="site-menu__trigger js-trigger"></span>
+		<ul class="site-menu__nav">
+			<li class="site-menu__list"><a href="#" class="site-menu__link">List Item</a></li>
+			<li class="site-menu__list"><a href="#" class="site-menu__link">List Item</a></li>
+			<li class="site-menu__list"><a href="#" class="site-menu__link">List Item</a></li>
+			<li class="site-menu__list"><a href="#" class="site-menu__link">List Item</a></li>
+			<li class="site-menu__list"><a href="http://github.com/dope/west" class="site-menu__link">GitHub Project</a></li>
+			<li class="site-menu__list"><a href="http://twitter.com/joericho" class="site-menu__link">@joericho</a></li>
 		</ul>
 	</nav>
-
- 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="js/west.js"></script>
 </body>
 </html>

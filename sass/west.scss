@@ -1,0 +1,132 @@
+// =================================
+// West, v3.
+// Created by @joericho
+// Licensed under MIT
+// =================================
+
+// Variables
+$color-black:       #000;
+$color-white:       #FFF;
+$color-link:        #777;
+
+// Options
+$nav-bg-color:      $color-white;
+
+
+$main-font:         "Open Sans", sans-serif;
+$font-size:         14px;
+$line-height:       1.6;
+
+// Media Queries
+// 
+$small:             30em;
+$medium:            43em;
+$large:             70em;
+
+@mixin small {
+    @media (max-width: $small) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media (min-width: $small) and (max-width: $medium) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media (min-width: $medium) and (max-width: $large) {
+        @content;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('../default-image.png') no-repeat top center;
+    position: relative;
+    left: 0;
+    transition: left .2s ease-in-out;
+    overflow-x: hidden;
+    font-family: $main-font;
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+.body--fly {
+    left: 25%;
+}
+
+.site-menu {
+    position: fixed;
+    top: 0;
+    left: -25%;
+    width: 25%;
+    height: 100%;
+    background: $nav-bg-color;
+    padding-top: 25px;
+    transition: left .2s ease-in-out;
+    
+    @include small {
+        left: -80%;
+        width: 80%;
+    }
+
+    @include medium {
+        left: -60%;
+        width: 60%;
+    }
+
+    &--fly {
+        left: 0;
+    }
+
+    &__trigger {
+        position: absolute;
+        top: 0;
+        right: -60px;
+        width: 25px;
+        height: 15px;
+        margin: 20px;
+        border-top: 1px solid $color-white;
+        border-bottom: 1px solid $color-white;
+        cursor: pointer;
+        transition: .3s;
+
+        &:after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            content: "";
+            width: 80%;
+            height: 1px;
+            background: $color-white;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        padding: 5px 25px;
+    }
+
+    &__link {
+        color: $color-white;
+        text-decoration: none;
+        font-size: 1.5em;
+        font-weight: 100;
+        color: $color-link;
+        transition: color .3s;
+
+        &:hover {
+            color: $color-black;
+        }
+    }
+}

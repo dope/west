@@ -12,7 +12,6 @@ $color-link:        #777;
 // Options
 $nav-bg-color:      $color-white;
 
-
 $main-font:         "Open Sans", sans-serif;
 $font-size:         14px;
 $line-height:       1.6;
@@ -89,12 +88,12 @@ body {
     &__trigger {
         position: absolute;
         top: 0;
-        right: -60px;
-        width: 25px;
-        height: 15px;
-        margin: 20px;
-        border-top: 1px solid $color-white;
-        border-bottom: 1px solid $color-white;
+        right: -80px;
+        width: 30px;
+        height: 20px;
+        margin: 30px;
+        border-top: 2px solid $color-white;
+        border-bottom: 2px solid $color-white;
         cursor: pointer;
         transition: .3s;
 
@@ -107,7 +106,7 @@ body {
             margin: auto;
             content: "";
             width: 80%;
-            height: 1px;
+            height: 2px;
             background: $color-white;
         }
     }

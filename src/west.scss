@@ -1,0 +1,111 @@
+/**
+* Variables
+*/
+
+$nav-background : #000 !default;
+$nav-text-color : #FFF !default;
+$nav-font-family: system, -apple-system, BlinkMacSystemFont, "Helvetica Neue" !default;
+$nav-font-size  : 18px !default;
+$nav-spacing    : 20px !default;
+$nav-width      : 300px !default;
+$nav-align      : center !default;
+
+.west {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate3d(-$nav-width, 0, 0);
+    transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+    width: $nav-width;
+    height: 100%;
+    background: $nav-background;
+    color: $nav-text-color;
+    font-family: $nav-font-family;
+    font-size: $nav-font-size;
+    text-align: $nav-align;
+    transition: transform 0.25s ease-in-out;
+
+    &__trigger {
+        position: absolute;
+        transform: translate3d($nav-width, 0, 0);
+        font-family: $nav-font-family;
+        font-size: $nav-font-size;
+        color: $nav-background;
+        padding: $nav-spacing;
+        padding-left: $nav-spacing * 2.1;
+        cursor: pointer;
+
+        &:before,
+        &:after {
+            position: absolute;
+            top: 0;
+            left: $nav-spacing;
+            margin: auto;
+            width: 15px;
+            height: 2px;
+            background: $nav-background;
+            content: "";
+            transition: transform 0.25s cubic-bezier(0.250, 0.195, 0.485, 0.285);
+        }
+
+        &:before {
+            bottom: 5px;
+        }
+
+        &:after {
+            bottom: -5px;
+        }
+
+        &--active {
+            &:before,
+            &:after {
+                bottom: 0;
+                transition: transform 0.25s cubic-bezier(0.250, 0.195, 0.485, 0.285);
+            }
+
+            &:before {
+                transform: rotate(45deg);
+            }
+
+            &:after {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    &__menu {
+        padding: $nav-spacing * 2 $nav-spacing;
+    }
+
+    &__wrapper {
+        margin: 0;
+        padding: 0;
+    }
+
+    &__list {
+        list-style: none;
+        margin-bottom: $nav-spacing;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $nav-text-color;
+        border-bottom: 2px solid transparent;
+
+        &:hover {
+            border-bottom-color: $nav-text-color;
+        }
+    }
+}
+
+.off-screen {
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.25s cubic-bezier(0.250, 0.195, 0.485, 0.285);
+    height: 100%;
+}
+
+.on-screen {
+    transform: translate3d($nav-width, 0, 0);
+    transition: transform 0.25s cubic-bezier(0.250, 0.195, 0.485, 0.285);
+    height: 100%;
+}

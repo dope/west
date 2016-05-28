@@ -1,0 +1,24 @@
+{
+  "name": "West",
+  "description": "Slide out navigation",
+  "main": "west.js",
+  "authors": [
+    "Joe Richardson <joe@lifes.gd>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "html5",
+    "ui",
+    "javascript",
+    "scss",
+    "sass"
+  ],
+  "homepage": "https://github.com/dope/west",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

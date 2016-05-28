@@ -1,0 +1,24 @@
+{
+  "name": "West",
+  "version": "4.0.0",
+  "description": "Slide out navigation",
+  "main": "west.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/dope/west.git"
+  },
+  "author": "Joe Richardson <joe@lifes.gd>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dope/west/issues"
+  },
+  "homepage": "https://dope.github.io/west",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-minify": "0.0.11",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.1",
+    "gulp-uglify": "^1.5.3"
+  }
+}

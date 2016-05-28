@@ -1,6 +1,8 @@
 # West
 West is a minimal and simplistic responsive slide-out navigation.
 
+Live URL: [http://dope.github.io/west/test](http://dope.github.io/west/test/)
+
 ## Installation
 ```git clone http://github.com/dope/west```
 
